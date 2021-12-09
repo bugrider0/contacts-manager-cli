@@ -34,5 +34,13 @@ yargs.command({
       demandOption: true,
       type: "number",
     },
+
+    // Email
+    email: {
+      alias: "e",
+      describe: "Person Email Address",
+      demandOption: true,
+      type: "string",
+    },
   },
 });
