@@ -49,3 +49,15 @@ yargs.command({
     console.log(`Name: ${name} - Phone: ${phone} - Email: ${email}`);
   },
 });
+
+/**
+ * Command Name: List
+ * Prompt: <null>
+ * Type: <null>
+ * Alias : l
+ */
+yargs.command({
+  command: "list",
+  aliases: ["l"],
+  describe: `${chalk.green("[listing the saved contacts]")}`,
+});
