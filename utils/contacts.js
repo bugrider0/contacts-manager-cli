@@ -1,5 +1,5 @@
 const fs = require("fs");
-import chalk from "chalk";
+const chalk = require("chalk");
 
 /**
  * Basic Authenticate And New Contact

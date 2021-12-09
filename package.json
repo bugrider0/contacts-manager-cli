@@ -1,7 +1,6 @@
 {
   "name": "contacts-manager-cli",
   "version": "1.0.0",
-  "type": "module",
   "description": "Simple Contacts Manager App",
   "main": "index.js",
   "scripts": {
@@ -21,7 +20,7 @@
     "@types/node": "^16.11.12"
   },
   "dependencies": {
-    "chalk": "^5.0.0",
+    "chalk": "^4.0.0",
     "yargs": "^15.3.1"
   }
 }

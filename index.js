@@ -1,14 +1,13 @@
-// const yargs = require("yargs");
-// const chalk = require("chalk");
-
-import yargs from "yargs";
-import chalk from "chalk";
+const yargs = require("yargs");
+const chalk = require("chalk");
 
 const { addContact, listContacts, removeContact } = require("./utils/contacts");
 
 // Common Usage Help
-yargs.scriptName(`${chalk.redBright("node main.js")}`);
-yargs.usage(`$0 ${chalk.blue("<command>")} ${chalk.magentaBright("[args]")}`);
+yargs.scriptName(`${chalk.redBright("node index.js")}`);
+yargs.usage(
+  `$0 ${chalk.blue("<command>")} ${chalk.magentaBright("[options]")}`
+);
 yargs.version("1.2.3");
 
 /**
@@ -48,7 +47,7 @@ yargs.command({
 
   // Handler Just Give Prop - Into <hander> Can Use Data
   handler({ name, phone, email }) {
-    console.log(`Name: ${name} - Phone: ${phone} - Email: ${email}`);
+    addContact(name, phone, email);
   },
 });
 
@@ -65,7 +64,7 @@ yargs.command({
 
   // Handler Just Give Prop - Into <hander> Can Use Data
   handler() {
-    console.log("List Command");
+    listContacts();
   },
 });
 
@@ -91,7 +90,7 @@ yargs.command({
 
   //   Handler Just Give Prop - Into <hander> Can Use Data
   handler({ name }) {
-    console.log(name);
+    removeContact(name);
   },
 });
 
