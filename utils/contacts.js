@@ -13,7 +13,20 @@ exports.addContact = (fullname, phone, email) => {};
  */
 exports.listContacts = () => {
   const contacts = loadContacts();
-  console.table(contacts);
+  if (contacts.length > 0) {
+    console.log(chalk.yellowBright("Your contacts:\n"));
+    // console.table(contacts);
+    console.log(chalk.redBright("\t------------------------------------"));
+    contacts.forEach((contact) => {
+      console.log(`\t${chalk.green("Fullname")}:\t${contact.fullname}`);
+      console.log(`\t${chalk.green("Phone")}:   \t${contact.phone}`);
+      console.log(`\t${chalk.green("Email")}:   \t${contact.email}`);
+      console.log(chalk.redBright("\t------------------------------------"));
+    });
+    console.log(chalk.redBright(""));
+  } else {
+    console.log(chalk.red("You don't have any contacts."));
+  }
 };
 
 /**
