@@ -77,6 +77,15 @@ yargs.command({
   command: "remove",
   aliases: ["r"],
   describe: `${chalk.green("[remove contact]")}`,
+
+  builder: {
+    name: {
+      alias: "f",
+      describe: "Person fullname",
+      demandOption: true,
+      type: "string",
+    },
+  },
 });
 
 yargs.parse();
