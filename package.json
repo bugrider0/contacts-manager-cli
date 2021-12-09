@@ -1,0 +1,26 @@
+{
+  "name": "contacts-manager-cli",
+  "version": "1.0.0",
+  "description": "Simple Contacts Manager App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsn8najafi/contacts-manager-cli.git"
+  },
+  "author": "Hosein Najafi <hsn8najafi@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hsn8najafi/contacts-manager-cli/issues"
+  },
+  "homepage": "https://github.com/hsn8najafi/contacts-manager-cli#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.12"
+  },
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "yargs": "^17.3.0"
+  }
+}
