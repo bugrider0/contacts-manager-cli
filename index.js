@@ -60,4 +60,9 @@ yargs.command({
   command: "list",
   aliases: ["l"],
   describe: `${chalk.green("[listing the saved contacts]")}`,
+
+  // Handler Just Give Prop - Into <hander> Can Use Data
+  handler() {
+    console.log("List Command");
+  },
 });
