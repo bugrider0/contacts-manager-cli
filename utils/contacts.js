@@ -17,7 +17,17 @@ exports.listContacts = () => {};
  * Filter Contact By Name And Remove From All Contacts List
  * @param {string} fullname
  */
-exports.removeContact = (fullname) => {};
+exports.removeContact = (fullname) => {
+  const contacts = loadContacts();
+  const filteredContacts = contacts.filter((c) => c.fullname !== fullname);
+
+  if (contacts.length > filteredContacts.length) {
+    // saveContacts(filteredContacts);
+    console.log(chalk.green(`${fullname} has been removed.`));
+  } else {
+    console.log(chalk.red("Contact not found."));
+  }
+};
 
 /**
  * Return a Array of All Contacts
