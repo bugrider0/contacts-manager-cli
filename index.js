@@ -4,6 +4,8 @@
 import yargs from "yargs";
 import chalk from "chalk";
 
+const { addContact, listContacts, removeContact } = require("./utils/contacts");
+
 // Common Usage Help
 yargs.scriptName(`${chalk.redBright("node main.js")}`);
 yargs.usage(`$0 ${chalk.blue("<command>")} ${chalk.magentaBright("[args]")}`);
