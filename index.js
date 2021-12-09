@@ -8,3 +8,13 @@ import chalk from "chalk";
 yargs.scriptName(`${chalk.redBright("node main.js")}`);
 yargs.usage(`$0 ${chalk.blue("<command>")} ${chalk.magentaBright("[args]")}`);
 yargs.version("1.2.3");
+
+/**
+ * Command Name: Create New Contacts
+ * Alias : c
+ */
+yargs.command({
+  command: "create",
+  aliases: ["c"],
+  describe: `${chalk.green("[create new contact]")}`,
+});
