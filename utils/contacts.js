@@ -6,7 +6,18 @@ const fs = require("fs");
  * @param {number} phone
  * @param {string} email
  */
-exports.addContact = (fullname, phone, email) => {};
+exports.addContact = (fullname, phone, email) => {
+  const contacts = loadContacts();
+  const duplicateContact = contacts.find((c) => c.fullname === fullname);
+
+  if (!duplicateContact) {
+    contacts.push({ fullname, phone, email });
+    saveContacts(contacts);
+    console.log(chalk.green("Contact Saved."));
+  } else {
+    console.log(chalk.red("Contact already exist."));
+  }
+};
 
 /**
  * Show Contacts As a Simple Table
