@@ -86,6 +86,11 @@ yargs.command({
       type: "string",
     },
   },
+
+  //   Handler Just Give Prop - Into <hander> Can Use Data
+  handler({ name }) {
+    console.log(name);
+  },
 });
 
 yargs.parse();
