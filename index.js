@@ -67,4 +67,16 @@ yargs.command({
   },
 });
 
+/**
+ * Command Name: Remove
+ * Prompt: Person fullname
+ * Type: String
+ * Alias : r
+ */
+yargs.command({
+  command: "remove",
+  aliases: ["r"],
+  describe: `${chalk.green("[remove contact]")}`,
+});
+
 yargs.parse();
