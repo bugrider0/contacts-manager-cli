@@ -66,3 +66,5 @@ yargs.command({
     console.log("List Command");
   },
 });
+
+yargs.parse();
