@@ -1,6 +1,7 @@
 {
   "name": "contacts-manager-cli",
   "version": "1.0.0",
+  "type": "module",
   "description": "Simple Contacts Manager App",
   "main": "index.js",
   "scripts": {
