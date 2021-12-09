@@ -17,4 +17,22 @@ yargs.command({
   command: "create",
   aliases: ["c"],
   describe: `${chalk.green("[create new contact]")}`,
+
+  builder: {
+    // Person FullName - Can Use <Space>
+    name: {
+      alias: "n",
+      describe: "Person fullname",
+      demandOption: true,
+      type: "string",
+    },
+
+    // Phone Number
+    phone: {
+      alias: "p",
+      describe: "Person Phone Number",
+      demandOption: true,
+      type: "number",
+    },
+  },
 });
