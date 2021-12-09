@@ -22,7 +22,16 @@ exports.removeContact = (fullname) => {};
 /**
  * Return a Array of All Contacts
  */
-const loadContacts = () => {};
+const loadContacts = () => {
+  try {
+    const dataBuffer = fs.readFileSync("data/contacts.json");
+    const contacts = dataBuffer.toString();
+    return JSON.parse(contacts);
+  } catch (err) {
+    console.log(err);
+    return [];
+  }
+};
 
 // Convert My Contacts Array to JSON And Write To A JSON File
 const saveContacts = (contacts) => {
