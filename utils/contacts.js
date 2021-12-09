@@ -11,7 +11,10 @@ exports.addContact = (fullname, phone, email) => {};
 /**
  * Show Contacts As a Simple Table
  */
-exports.listContacts = () => {};
+exports.listContacts = () => {
+  const contacts = loadContacts();
+  console.table(contacts);
+};
 
 /**
  * Filter Contact By Name And Remove From All Contacts List
@@ -22,7 +25,7 @@ exports.removeContact = (fullname) => {
   const filteredContacts = contacts.filter((c) => c.fullname !== fullname);
 
   if (contacts.length > filteredContacts.length) {
-    // saveContacts(filteredContacts);
+    saveContacts(filteredContacts);
     console.log(chalk.green(`${fullname} has been removed.`));
   } else {
     console.log(chalk.red("Contact not found."));
