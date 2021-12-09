@@ -43,4 +43,9 @@ yargs.command({
       type: "string",
     },
   },
+
+  // Handler Just Give Prop - Into <hander> Can Use Data
+  handler({ name, phone, email }) {
+    console.log(`Name: ${name} - Phone: ${phone} - Email: ${email}`);
+  },
 });
