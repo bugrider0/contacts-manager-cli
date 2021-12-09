@@ -16,3 +16,8 @@ exports.listContacts = () => {};
  * @param {string} fullname
  */
 exports.removeContact = (fullname) => {};
+
+/**
+ * Return a Array of All Contacts
+ */
+const loadContacts = () => {};
