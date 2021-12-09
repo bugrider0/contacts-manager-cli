@@ -1,3 +1,5 @@
+import fs from "fs";
+
 /**
  * Basic Authenticate And New Contact
  * @param {string} fullname
@@ -23,4 +25,7 @@ exports.removeContact = (fullname) => {};
 const loadContacts = () => {};
 
 // Convert My Contacts Array to JSON And Write To A JSON File
-const saveContacts = (contacts) => {};
+const saveContacts = (contacts) => {
+  const data = JSON.stringify(contacts);
+  fs.writeFileSync("data/contacts.json", data);
+};
