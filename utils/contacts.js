@@ -21,3 +21,6 @@ exports.removeContact = (fullname) => {};
  * Return a Array of All Contacts
  */
 const loadContacts = () => {};
+
+// Convert My Contacts Array to JSON And Write To A JSON File
+const saveContacts = (contacts) => {};
