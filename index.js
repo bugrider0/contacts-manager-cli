@@ -81,7 +81,7 @@ yargs.command({
 
   builder: {
     name: {
-      alias: "f",
+      alias: "n",
       describe: "Person fullname",
       demandOption: true,
       type: "string",
