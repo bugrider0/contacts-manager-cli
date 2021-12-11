@@ -12,3 +12,5 @@ npm i
 npm start
 `
 ```
+
+![ScreenShot](./screenShot.jpg)
